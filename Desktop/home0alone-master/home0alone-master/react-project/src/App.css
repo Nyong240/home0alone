@@ -1,0 +1,169 @@
+
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid blue;
+    /* 그라데이션을 위한 배경 설정 */
+    /* background: linear-gradient(to bottom, #e1f3fa, #cee0f8); */
+    overflow: auto;
+  }
+  
+  .body{
+    display: flex;
+    width: 1200px;
+    height: 800px;
+    margin-top: 100px;
+    padding-bottom: 200px;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .header{
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; /* 수직 가운데 정렬 */
+  }  
+
+  .admin{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .adminMemberList{
+    border-radius: 10px;
+    width: 400px;
+    height: 450px;
+    /* background-color: yellow; */
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 23px;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    transition: background-color 1s;
+    overflow: auto;
+  }
+  .style_WD{
+    display: flex;
+    gap: 20px;
+    flex-direction: row; /* 수평으로 아이템 정렬 */
+    justify-content: center;
+    align-items: center; /* 수직 가운데 정렬 */
+  }
+
+  .style_header_WD{
+    display: flex;
+    justify-content: center;
+    align-items: center; /* 수직 가운데 정렬 */
+  }
+  .window {
+    border-radius: 10px;    
+    width: 300px;
+    height: 350px;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: white; /* 초기 배경색 설정 */
+    transition: background-color 1s; /* 배경색 변화에 대한 트랜지션 효과 설정 */
+  }
+  
+  .led {
+    margin-top: 100px;
+    border-radius: 10px;
+    
+    width: 300px;
+    height: 350px;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 23px;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    transition: background-color 1s;
+  }
+  
+  .doorLock {
+    border-radius: 10px;
+    width: 300px;
+    height: 350px;
+    /* background-color: yellow; */
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 23px;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    transition: background-color 1s;
+    overflow: auto;
+  }
+  
+  .goingout {
+
+    border-radius: 10px;    
+    width: 300px;
+    height: 350px;
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 23px;
+    align-items: center;
+    gap: 10px;
+    background-color: white;
+    transition: background-color 1s;
+  }
+
+  .socket {
+    border-radius: 10px;
+    
+    width: 300px;
+    height: 350px;
+    /* background-color: green; */
+    border: 1px solid blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: white; /* 초기 배경색 설정 */
+    transition: background-color 1s; /* 배경색 변화에 대한 트랜지션 효과 설정 */
+    
+  }
+  
+  .button {
+    padding: 10px 20px;
+    background-color: white;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* 배경색 변화에 트랜지션 효과 */
+  }
+  
+  .button:hover {
+    background-color: #1d29d3; /* 마우스를 올리면 약간 어두워지는 효과 */
+    color: white;
+  }
+  
+  .container:hover {
+    transform: translateY(-5px); /* 마우스를 올렸을 때 컨테이너가 위로 약간 올라감*/
+    background-color: #1d2cfa; /* 마우스를 올렸을 때의 배경색 설정 */
+  }
+  
+   
