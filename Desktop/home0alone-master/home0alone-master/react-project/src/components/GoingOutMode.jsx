@@ -23,10 +23,11 @@ const GoingOutMode = () => {
 
     const sethours = ()=>{
         setHours(hRef.current.value)
-    }
+    };
+
     const setmins = ()=>{
         setMins(mRef.current.value)
-    }
+    };
 
     const setGoingOut = async()=>{
         console.log(hRef.current.value, mRef.current.value);
@@ -45,7 +46,7 @@ const GoingOutMode = () => {
         } catch (error) {
             console.error('window control 중에 에러 발생', error);        
         }
-    }
+    };
 
     useEffect(()=>{
         if(time !== undefined){
@@ -59,46 +60,44 @@ const GoingOutMode = () => {
             }
         }
 
-    },[time])
+    },[time]);
 
     const a = {
         paddingRight : '20px'
-    } 
+    };
 
 /* =========================== isOFf ============================*/
  
  
-const turnOff = async() =>{
-    try{
+    const turnOff = async() =>{
+        try{
+            
+            const response = await axios.post('http://172.30.1.48:8080/api/onoff',{isOff});
+            console.log("성공")
+            setResponseData(response.data);
+            console.log(response.data); // 응답 확인
+        }catch(error){
+            console.error('window켜는중에 에러 발생', error);
+        }
+    };
+
+    const turnOn = async() =>{
         
-        const response = await axios.post('http://172.30.1.48:8080/api/onoff',{isOff});
-        console.log("성공")
-        setResponseData(response.data);
-        console.log(response.data); // 응답 확인
-    }catch(error){
-        console.error('window켜는중에 에러 발생', error);
-    }
-}
-
-const turnOn = async() =>{
-    
-    try{
-        const response = await axios.post('http://172.30.1.48:8080/api/onoff',{isOn});
-        console.log("성공")
-        setResponseData(response.data);
-        console.log(response.data); // 응답 확인
-    }catch(error){
-        console.error('window켜는중에 에러 발생', error);
-    }
-}
-
- 
+        try{
+            const response = await axios.post('http://172.30.1.48:8080/api/onoff',{isOn});
+            console.log("성공")
+            setResponseData(response.data);
+            console.log(response.data); // 응답 확인
+        }catch(error){
+            console.error('window켜는중에 에러 발생', error);
+        }
+    };
     
 
   return (
     <div className='goingout'>
         <h1>외출모드</h1>
-        <h4>창문 자동화</h4>
+        
         <div>
             <select ref={hRef}>
                 {hourList.map((item)=>{return <option value={hours} key={hours} onChange={sethours}>{item}</option>})}
@@ -110,8 +109,9 @@ const turnOn = async() =>{
             <span style={a}>분</span>
             <button className='button' onClick={setGoingOut}>설정</button>
         </div>
-        <button className='button' onClick={turnOff}>외출모드 끄기</button>
+        <br/>
         <button className='button' onClick={turnOn}>외출모드 켜기</button>
+        <button className='button' onClick={turnOff}>외출모드 끄기</button>
         {responseData && <div>받은 응답: {JSON.stringify(responseData.message)}</div>}
 
         

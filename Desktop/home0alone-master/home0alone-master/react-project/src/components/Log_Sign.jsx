@@ -15,8 +15,8 @@ const Log_Sign = () => {
         <Link to="/login">
           <Button variant="light">로그인</Button>
         </Link>
-        </Nav>
-        </Card.Body>
+      </Nav>
+    </Card.Body>
    
     </>
   )

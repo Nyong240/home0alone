@@ -72,7 +72,7 @@ const Header = () => {
 
     const handleDeleteAccount =  () => {
         try {
-             axios.post('/user/delete', { user });
+            axios.post('/user/delete', { user });
             setShowModal(false);
             alert('회원탈퇴가 완료되었습니다');
             sessionStorage.removeItem('user');
@@ -82,13 +82,13 @@ const Header = () => {
         }
     }
 
+
     return (
         <div className='header'>
             <h3>{user.nick}님</h3>
             
             <div className='style_header_WD'>
                 <Button variant="light" onClick={() => setShowModal(true)}>회원탈퇴</Button>
-                
                 <Link>
                     <Button variant='light' onClick={handleLogOut}>로그아웃</Button>
                 </Link>
@@ -105,7 +105,7 @@ const Header = () => {
                 <Modal.Header closeButton>
                     <Modal.Title>회원탈퇴</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>진짜 탈퇴하시겠습니까?</Modal.Body>
+                <Modal.Body>탈퇴하시겠습니까?</Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={() => setShowModal(false)}>
                         아니요

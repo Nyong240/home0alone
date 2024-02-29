@@ -10,7 +10,8 @@ const Videos = ({ name }) => {
       width="320"
       height="240"
       allow="autoplay"
-    ></iframe>):(<div></div>)}
+      target="_blank"
+      ></iframe>):(<div></div>)}
     </div>
   );
 };

@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import { Card } from "react-bootstrap";
 
 import Logo from './Logo'
-import Login from './Login'
+// import Login from './Login'
 import Log_Sign from './Log_Sign';
 import Header from './Header';
 import Admin from './Admin';
@@ -18,11 +18,6 @@ const Left = () => {
           
             {/* <Log_Sign/> */}
             {/* <Card.Body> */}
-                <Routes>
-                    
-                    {/* <Route path="/login" element={<Login/>}/> */}
-                   
-                </Routes>
             {/* </Card.Body> */}
         {/* </Card> */}
     </div>

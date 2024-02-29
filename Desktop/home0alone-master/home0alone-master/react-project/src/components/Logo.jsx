@@ -8,7 +8,7 @@ const Logo = () => {
     }
   return (
     <div >
-        <img src='./img/240.jpg' style={logoCss}/>
+        <img src='./img/240.png' style={logoCss}/>
     </div>
   )
 }

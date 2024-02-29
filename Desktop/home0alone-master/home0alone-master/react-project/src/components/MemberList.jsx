@@ -23,22 +23,26 @@ const MemberList = () => {
 
   return (
     <div>
-      <h1>회원정보</h1>
-        <table>
-          <tr>
-            <th>아이디</th>
-            <th>이름</th>
-            <th>주소</th>
-            <th>전화번호</th>
-          </tr>
-          {memberlist.map((item)=>(
-            <tr key={item.user_id}>
-              <td>{item.user_id}</td>
-              <td>{item.user_name}</td>
-              <td>{item.user_addr}</td>
-              <td>{item.user_tel}</td>
+      <h2>회원정보</h2>
+        <table className="memberlistTable">
+          <thead className="th">
+            <tr>
+              <th>아이디</th>
+              <th>이름</th>
+              <th>주소</th>
+              <th>전화번호</th>
             </tr>
-          ))}
+          </thead>
+          <tbody>
+            {memberlist.map((item)=>(
+              <tr key={item.user_id}>
+                <td>{item.user_id}</td>
+                <td>{item.user_name}</td>
+                <td>{item.user_addr}</td>
+                <td>{item.user_tel}</td>
+              </tr>
+            ))}
+          </tbody>          
         </table>     
     </div>
   );

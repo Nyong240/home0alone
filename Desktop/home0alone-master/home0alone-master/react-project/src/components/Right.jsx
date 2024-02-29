@@ -11,7 +11,7 @@ import Login from './Login';
 
 const Right = () => {
   return (
-    <div>
+    <div className='all'>
         {/* <Card> */}
             
 

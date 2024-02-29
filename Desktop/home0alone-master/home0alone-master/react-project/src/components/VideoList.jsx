@@ -42,20 +42,21 @@ const VideoList = (video) => {
   const handleVideo = () => {
     const context = Object.values(video)[0].video_name;
     setName(context);
-    
   };
   
 //setIsDownloaded(true);
   return (
-    <table>
-      <tr>
-        <td>
-          <button onClick={handleVideo}>영상 보기</button>
-        </td>
-        <td>{Object.values(video)[0].video_name}</td>
-      </tr>
+    <div>
+      <table>
+        <tr>
+          <td>
+            <button onClick={handleVideo}>영상 보기</button>
+          </td>
+          <td>{Object.values(video)[0].video_name}</td>
+        </tr>
+      </table>
       <Videos name={name} />
-    </table>
+    </div>
   );
 };
 
