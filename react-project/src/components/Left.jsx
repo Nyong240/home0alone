@@ -12,14 +12,11 @@ const Left = () => {
   const user = JSON.parse(sessionStorage.getItem('user'))
   return (
     <div className='header'>
-        {/* <Card> */}
+       
            <Logo/>
            {user && user.id==='admin'?(<Admin/>):user? (<Header/>):(<Log_Sign/>)}
           
-            {/* <Log_Sign/> */}
-            {/* <Card.Body> */}
-            {/* </Card.Body> */}
-        {/* </Card> */}
+        
     </div>
   )
 }

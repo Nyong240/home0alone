@@ -25,8 +25,7 @@ const Window = () => {
  
   const windowOpen = async () => {
     try {
-      // axios.post('/values/windowOpen',{id,isWindow});
-      // setIsWindow(true)
+      
       const response = await axios.post('http://172.30.1.46:8080/api/window/open');
       console.log("성공")
       setResponseData(response.data);

@@ -1,9 +1,6 @@
-// import { setHours, setMinutes } from 'date-fns';
+
 import React, { useEffect, useRef, useState, useContext } from 'react'
 import { SocketContext } from '../context/socket';
-// import { InputGroup } from 'react-bootstrap';
-// import ReactDatePicker from 'react-datepicker';
-// import TimePicker from 'react-time-picker';
 import axios from 'axios'
 
 const GoingOutMode = () => {

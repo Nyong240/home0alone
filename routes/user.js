@@ -1,17 +1,14 @@
-/* 회원 관련 페이지 기능 구현 
-- 기능 : 회원가입, 중복체크, 로그인, 회원탈퇴, 로그아웃, 회원검색 
-*/
+// 회원가입
 
 const express = require("express");
 const router = express.Router();
 const conn = require('../config/database')
-// 회원가입
+
 let a = 0
 let b = 0
-// ID 중복
 
 function isKorean(str) {
-    // 정규표현식을 사용하여 한글 여부를 판별합니다.
+    // 한글 X
     const koreanRegex = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
     return koreanRegex.test(str);
   }
@@ -123,24 +120,7 @@ router.post('/login',(req,res)=>{
     })
 })
 
-// 회원 탈퇴 라우터
 
-
-    
-// 로그아웃 라우터
-//  - session을 server에 저장한 경우에는 해당 라우터로 와야함 (기존)
-//  - session을 front에 저장한 경우에는 로그아웃을 react에서 설정 가능
-
-// 회원정보 (비밀번호) 변경
-// router.post('/checkPw',(req,res)=>{
-//     console.log('비밀번호 변경 요청..',req.body);
-//     res.json({result:'changed'})
-// })
-// // 회원정보 (이름, 이메일) 수정
-// router.post('/modify',(req,res)=>{
-//     console.log('회원정보변경',req.body);
-//     res.json({result:'success'})
-// })
 // 회원 탈퇴 라우터
 router.post('/delete', (req,res)=>{
     console.log('전달받은 회원정보 : ',req.body)
@@ -151,6 +131,5 @@ router.post('/delete', (req,res)=>{
     })
 })
 
-// 회원 검색 라우터
 
 module.exports = router;

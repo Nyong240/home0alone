@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { Form, Button } from 'react-bootstrap'
 import axios from '../axios'
-// import { useNavigate } from 'react-router-dom'
+
 
 import DaumPostcode from 'react-daum-postcode';
 import DatePicker from 'react-datepicker';
@@ -82,7 +82,6 @@ const SignUp = () => {
       nick : nicknameRef.current.value,
       birth: birthdateRef.current.value,
       addr: addressRef.current.value,
-    //  gender: genderRef.current.value,
       tel : telephoneRef.current.value
     })
   };

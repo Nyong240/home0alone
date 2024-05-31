@@ -1,4 +1,3 @@
-// require, import .. 
 const express = require('express');
 const app = express();
 const { createServer } = require('http');
@@ -7,9 +6,9 @@ const { Server } = require('socket.io');
 const server = createServer(app);
 const io = new Server(server);
 var globalVariable ='';
-var BoolVariable = true;
 
-// Router require 정의(indexRouter, userRouter)
+
+
 const indexRouter = require('./routes')
 const userRouter = require('./routes/user')
 const videoRouter = require('./routes/video')
@@ -18,22 +17,16 @@ const valuesRouter = require('./routes/values')
 //database
 const conn = require('./config/database')
 
-// path, cors, body-parser require 정의
+
 const path = require('path');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 
-// 정적인 파일을 가져오기 위한 미들웨어 
-// app.use(express.static(path.join(__dirname, 'react-project', 'build')));
 
-// cors 오류 해결을 위한 미들웨어 
-// 1) cors 모듈 설치 : npm i cors 
-// 2) require 
-// 3) 사용 
 app.use(cors());
 app.use(express.json());
 
-// body-parser 미들웨어 대체 express 내장 모듈 
+
 app.use(express.urlencoded({extended : true}));
 
 app.use(bodyParser.urlencoded({ extended: false} ))
@@ -58,7 +51,7 @@ app.post('/sensor-data', (req, res) => {
     const data = req.body.data
     console.log('Received sensor value:', data);
     // 여기서 센서 값을 처리하거나 저장하는 작업을 수행할 수 있습니다.
-    res.sendStatus(200); // 요청 처리 성공 응답
+    res.sendStatus(200); 
     
     io.emit('sensorData', data);
     const sql2 = "insert into alert values('123',now());"

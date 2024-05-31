@@ -12,20 +12,16 @@ import Login from './Login';
 const Right = () => {
   return (
     <div className='all'>
-        {/* <Card> */}
-            
-
-            {/* <Card.Body> */}
+       
                 <Routes>
                     <Route path="/login" element={<Login/>}/>
                     <Route path="/signup" element={<SignUp/>}/> 
                     <Route path="/doorlock" element={<DoorLock/>}/>
                     <Route path="/window" element={<Window/>}/>
-                    {/* <Route path="/admin" element={<Admin/>}/> */}
+                    
                     <Route path="/memberlist" element={<MemberList/>}/>
                 </Routes>
-            {/* </Card.Body> */}
-        {/* </Card> */}
+          
     </div>
   )
 }

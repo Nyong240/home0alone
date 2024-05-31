@@ -9,10 +9,7 @@ const MemberList = () => {
   useEffect(()=>{
     axios.post('/admin/memberlist',{id})
     .then((res)=>{
-      // console.log(res.data);
-      // console.log(res.data.results);
-      // console.log(res.data.results[0]);
-      // console.log(res.data.results[0].user_id);
+     
 
       
       const member = res.data.results;

@@ -45,13 +45,9 @@ const DoorLock = () => {
     })     
   };
 
-  // useEffect(()=>{},[videos])
 
   const doorOpen = async () => {
     try {
-      // await axios.post('/values/doorLockOpen',{id,isDoorLock});
-      // console.log('jh success');
-      // setIsDoorLock(true)
       const response = await axios.post(`http://172.30.1.46:8080/api/door/unlock`);
       console.log("성공")
       setResponseData(response.data);
